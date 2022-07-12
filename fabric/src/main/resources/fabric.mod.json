@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "mcpitanlib2",
+  "version": "${version}",
+  "name": "MCPitanLib2",
+  "description": "Pitan's Mod Library",
+  "authors": [
+    "Pitan"
+  ],
+  "contact": {
+    "repo": "https://github.com/Pitan76/MCPitanLib2"
+  },
+  "license": "MPL-2.0",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ml.pkom.mcpitanlib2.fabric.MCPitanLib2Fabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.8",
+    "minecraft": ">=1.19"
+  }
+}
