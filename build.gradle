@@ -49,3 +49,9 @@ allprojects {
         withSourcesJar()
     }
 }
+
+loom {
+    forge {
+        mixinConfig "mcpitanlib2.mixins.json"
+    }
+}
