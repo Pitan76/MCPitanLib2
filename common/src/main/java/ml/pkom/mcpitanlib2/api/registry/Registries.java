@@ -27,6 +27,12 @@ public class Registries {
 
      */
 
+    public static void init() {
+        BLOCKS.register();
+        ITEMS.register();
+        SCREEN_HANDLERS.register();
+    }
+
     public static RegistryEvent<Item> registerItem(ExtendIdentifier identifier, ml.pkom.mcpitanlib2.api.item.Item item) {
         return registerItem(identifier.getIdentifier(), ExtendedItem.of(item));
     }

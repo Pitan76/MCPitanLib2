@@ -1,5 +1,6 @@
 package ml.pkom.mcpitanlib2;
 
+import ml.pkom.mcpitanlib2.api.registry.Registries;
 import ml.pkom.mcpitanlib2.test.MPLTest;
 import net.fabricmc.loader.api.FabricLoader;
 
@@ -10,5 +11,6 @@ public class MCPitanLib2 {
         if (FabricLoader.getInstance().isDevelopmentEnvironment()) {
             MPLTest.init();
         }
+        Registries.init();
     }
 }
