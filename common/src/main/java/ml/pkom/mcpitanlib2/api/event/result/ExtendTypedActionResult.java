@@ -44,7 +44,7 @@ public class ExtendTypedActionResult<T> {
         return new TypedActionResult<>(result, value);
     }
 
-    public static <T> ExtendTypedActionResult<T> fromTypedActionResult(TypedActionResult<T> actionResult) {
+    public static <T> ExtendTypedActionResult<T> from(TypedActionResult<T> actionResult) {
         return new ExtendTypedActionResult<>(actionResult.getResult(), actionResult.getValue());
     }
 }

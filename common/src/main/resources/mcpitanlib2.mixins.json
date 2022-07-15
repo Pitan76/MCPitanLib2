@@ -4,6 +4,8 @@
   "package": "ml.pkom.mcpitanlib2.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "AbstractBlockAccessor",
+    "AbstractBlockSettingsAccessor",
     "ItemUsageContextMixin",
     "MiningToolItemMixin",
     "RecipeManagerMixin"

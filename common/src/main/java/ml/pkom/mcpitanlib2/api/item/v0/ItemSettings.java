@@ -1,10 +1,11 @@
-package ml.pkom.mcpitanlib2.api.item;
+package ml.pkom.mcpitanlib2.api.item.v0;
 
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Rarity;
 
+@Deprecated
 public class ItemSettings {
     private Item.Settings settings = new Item.Settings();
 

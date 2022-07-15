@@ -3,21 +3,20 @@ package ml.pkom.mcpitanlib2.api.event.item;
 import ml.pkom.mcpitanlib2.api.entity.Player;
 import ml.pkom.mcpitanlib2.api.event.BaseEvent;
 import ml.pkom.mcpitanlib2.api.util.Hand;
-import ml.pkom.mcpitanlib2.api.world.WorldLevel;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
-public class ItemUseEvent extends BaseEvent {
+public class ItemRightClickEvent extends BaseEvent {
 
-    private WorldLevel world;
+    private ml.pkom.mcpitanlib2.api.world.World world;
     private Player player;
     private Hand hand;
 
-    public ItemUseEvent(World world, PlayerEntity user, net.minecraft.util.Hand hand) {
-        this(new WorldLevel(world), new Player(user), Hand.fromMCHand(hand));
+    public ItemRightClickEvent(World world, PlayerEntity user, net.minecraft.util.Hand hand) {
+        this(new ml.pkom.mcpitanlib2.api.world.World(world), new Player(user), Hand.fromMCHand(hand));
     }
 
-    public ItemUseEvent(WorldLevel world, Player user, Hand hand) {
+    public ItemRightClickEvent(ml.pkom.mcpitanlib2.api.world.World world, Player user, Hand hand) {
         setWorld(world);
         setPlayer(user);
         setHand(hand);
@@ -27,7 +26,7 @@ public class ItemUseEvent extends BaseEvent {
         this.player = player;
     }
 
-    public void setWorld(WorldLevel world) {
+    public void setWorld(ml.pkom.mcpitanlib2.api.world.World world) {
         this.world = world;
     }
 
@@ -39,7 +38,7 @@ public class ItemUseEvent extends BaseEvent {
         return player;
     }
 
-    public WorldLevel getWorld() {
+    public ml.pkom.mcpitanlib2.api.world.World getWorld() {
         return world;
     }
 

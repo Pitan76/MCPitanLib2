@@ -1,10 +1,11 @@
-package ml.pkom.mcpitanlib2.api.item;
+package ml.pkom.mcpitanlib2.api.item.v0;
 
-import ml.pkom.mcpitanlib2.api.event.item.ItemUseEvent;
+import ml.pkom.mcpitanlib2.api.event.item.ItemRightClickEvent;
 import ml.pkom.mcpitanlib2.api.event.result.ExtendTypedActionResult;
 import ml.pkom.mcpitanlib2.api.util.ResultSuperFunction;
 import net.minecraft.item.ItemStack;
 
+@Deprecated
 public class Item {
     ItemSettings settings;
 
@@ -20,7 +21,7 @@ public class Item {
         return settings;
     }
 
-    public ExtendTypedActionResult<ItemStack> onUse(ItemUseEvent event, ResultSuperFunction<ExtendTypedActionResult<ItemStack>> superFunction) {
+    public ExtendTypedActionResult<ItemStack> onUse(ItemRightClickEvent event, ResultSuperFunction<ExtendTypedActionResult<ItemStack>> superFunction) {
         return superFunction.superF();
     }
 

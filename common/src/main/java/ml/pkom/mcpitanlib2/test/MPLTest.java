@@ -1,14 +1,14 @@
 package ml.pkom.mcpitanlib2.test;
 
-import ml.pkom.mcpitanlib2.api.block.Block;
-import ml.pkom.mcpitanlib2.api.block.BlockSettings;
+import ml.pkom.mcpitanlib2.api.block.ExtendBlock;
 import ml.pkom.mcpitanlib2.api.registry.Registries;
-import ml.pkom.mcpitanlib2.api.util.ExtendIdentifier;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Material;
+import net.minecraft.util.Identifier;
 
 public class MPLTest {
     public static void init() {
-        Block block = new Block(new BlockSettings(Material.SNOW_BLOCK).hardness(1f).resistance(1f));
-        Registries.registerBlock(new ExtendIdentifier("mpltest:block"), block);
+        ExtendBlock block = new ExtendBlock(AbstractBlock.Settings.of(Material.STONE));
+        Registries.registerBlock(new Identifier("mpltest:block"), block);
     }
 }

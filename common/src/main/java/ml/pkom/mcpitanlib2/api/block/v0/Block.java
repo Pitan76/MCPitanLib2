@@ -1,9 +1,10 @@
-package ml.pkom.mcpitanlib2.api.block;
+package ml.pkom.mcpitanlib2.api.block.v0;
 
 import ml.pkom.mcpitanlib2.api.event.block.BlockBreakEvent;
 import ml.pkom.mcpitanlib2.api.event.block.BlockBrokenEvent;
 import ml.pkom.mcpitanlib2.api.util.SuperFunction;
 
+@Deprecated
 public class Block {
 
     BlockSettings settings;

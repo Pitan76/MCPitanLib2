@@ -22,4 +22,18 @@ public enum ExtendActionResult {
     public void setActionResult(ActionResult actionResult) {
         this.actionResult = actionResult;
     }
+
+    public static ExtendActionResult from(ActionResult actionResult) {
+        return switch (actionResult) {
+            case SUCCESS -> SUCCESS;
+            case CONSUME -> CONSUME;
+            case CONSUME_PARTIAL -> CONSUME_PARTIAL;
+            case PASS -> PASS;
+            case FAIL -> FAIL;
+        };
+    }
+
+    public ActionResult toActionResult() {
+        return getActionResult();
+    }
 }

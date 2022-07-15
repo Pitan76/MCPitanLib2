@@ -1,4 +1,4 @@
-package ml.pkom.mcpitanlib2.api.block;
+package ml.pkom.mcpitanlib2.api.block.v0;
 
 import ml.pkom.mcpitanlib2.api.event.block.BlockBreakEvent;
 import ml.pkom.mcpitanlib2.api.event.block.BlockBrokenEvent;
@@ -9,15 +9,16 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
+@Deprecated
 public class ExtendedBlock extends Block {
 
-    private ml.pkom.mcpitanlib2.api.block.Block MPLBlock;
+    private ml.pkom.mcpitanlib2.api.block.v0.Block MPLBlock;
 
-    public void setMPLBlock(ml.pkom.mcpitanlib2.api.block.Block MPLBlock) {
+    public void setMPLBlock(ml.pkom.mcpitanlib2.api.block.v0.Block MPLBlock) {
         this.MPLBlock = MPLBlock;
     }
 
-    public ml.pkom.mcpitanlib2.api.block.Block getMPLBlock() {
+    public ml.pkom.mcpitanlib2.api.block.v0.Block getMPLBlock() {
         return MPLBlock;
     }
 
@@ -39,12 +40,12 @@ public class ExtendedBlock extends Block {
         MPLBlock.onBreak(new BlockBreakEvent(world, pos, state, player), () -> super.onBreak(world, pos, state, player));
     }
 
-    public ExtendedBlock(ml.pkom.mcpitanlib2.api.block.Block block) {
+    public ExtendedBlock(ml.pkom.mcpitanlib2.api.block.v0.Block block) {
         super(block.getSettings().getSettings());
         setMPLBlock(block);
     }
 
-    public static ExtendedBlock of(ml.pkom.mcpitanlib2.api.block.Block block) {
+    public static ExtendedBlock of(ml.pkom.mcpitanlib2.api.block.v0.Block block) {
         return new ExtendedBlock(block);
     }
 }

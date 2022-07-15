@@ -1,7 +1,6 @@
-package ml.pkom.mcpitanlib2.api.block;
+package ml.pkom.mcpitanlib2.api.block.v0;
 
 import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
@@ -9,6 +8,7 @@ import net.minecraft.util.DyeColor;
 
 import java.util.function.Function;
 
+@Deprecated
 public class BlockSettings {
     private AbstractBlock.Settings settings;
 

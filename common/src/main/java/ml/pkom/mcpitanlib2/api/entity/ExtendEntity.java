@@ -1,13 +1,14 @@
 package ml.pkom.mcpitanlib2.api.entity;
 
 import ml.pkom.mcpitanlib2.api.nbt.NbtTag;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.world.World;
 
-public class Entity extends net.minecraft.entity.Entity {
-    public Entity(EntityType<?> type, World world) {
+public class ExtendEntity extends Entity {
+    public ExtendEntity(EntityType<?> type, World world) {
         super(type, world);
     }
 
