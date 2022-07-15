@@ -11,7 +11,7 @@ import net.minecraft.world.WorldAccess;
 
 public class ExtendedBlock extends Block {
 
-    public ml.pkom.mcpitanlib2.api.block.Block MPLBlock;
+    private ml.pkom.mcpitanlib2.api.block.Block MPLBlock;
 
     public void setMPLBlock(ml.pkom.mcpitanlib2.api.block.Block MPLBlock) {
         this.MPLBlock = MPLBlock;
@@ -25,6 +25,10 @@ public class ExtendedBlock extends Block {
         super(settings);
     }
 
+    public ExtendedBlock(BlockSettings settings) {
+        this(settings.getSettings());
+    }
+
     @Override
     public void onBroken(WorldAccess world, BlockPos pos, BlockState state) {
         MPLBlock.onBroken(new BlockBrokenEvent(world, pos, state), () -> super.onBroken(world, pos, state));
@@ -33,5 +37,14 @@ public class ExtendedBlock extends Block {
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         MPLBlock.onBreak(new BlockBreakEvent(world, pos, state, player), () -> super.onBreak(world, pos, state, player));
+    }
+
+    public ExtendedBlock(ml.pkom.mcpitanlib2.api.block.Block block) {
+        super(block.getSettings().getSettings());
+        setMPLBlock(block);
+    }
+
+    public static ExtendedBlock of(ml.pkom.mcpitanlib2.api.block.Block block) {
+        return new ExtendedBlock(block);
     }
 }
