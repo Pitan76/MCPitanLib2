@@ -1,10 +1,36 @@
 package ml.pkom.mcpitanlib2.api.block;
 
 import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.Material;
+import net.minecraft.util.DyeColor;
+
+import java.util.function.Function;
 
 public class BlockSettings {
     private AbstractBlock.Settings settings;
+
+    public BlockSettings(AbstractBlock block) {
+        setSettings(AbstractBlock.Settings.copy(block));
+    }
+
+    public BlockSettings(Material material) {
+        setSettings(AbstractBlock.Settings.of(material));
+    }
+
+    public BlockSettings(Material material, DyeColor color) {
+        setSettings(AbstractBlock.Settings.of(material, color));
+    }
+
+    public BlockSettings(Material material, MapColor color) {
+        setSettings(AbstractBlock.Settings.of(material, color));
+    }
+
+    public BlockSettings(Material material, Function<BlockState, MapColor> mapColor) {
+        setSettings(AbstractBlock.Settings.of(material, mapColor));
+    }
 
     public BlockSettings air() {
         settings.air();

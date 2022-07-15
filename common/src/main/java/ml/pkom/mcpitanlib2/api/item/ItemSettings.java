@@ -6,7 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Rarity;
 
 public class ItemSettings {
-    private Item.Settings settings;
+    private Item.Settings settings = new Item.Settings();
 
     public void setSettings(Item.Settings settings) {
         this.settings = settings;
